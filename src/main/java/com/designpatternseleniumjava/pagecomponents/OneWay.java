@@ -1,5 +1,9 @@
 package com.designpatternseleniumjava.pagecomponents;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.function.Consumer;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -17,13 +21,17 @@ public class OneWay extends AbstractComponent implements SearchFlightAvailable{
 	}
 
 	@Override
-	public void checkAvailability(String origin, String destination) {
+	public void checkAvailability(List<HashMap<String,String>> origDest) {
+		String origin = origDest.get(0).get("origin");
+		String destination = origDest.get(0).get("destination");
 		System.out.println("One way: "+origin+" to "+destination);
-		findElement(this.origin).click();
-		findSelectElementDynamic(origin).click();
+		makeStateReady(s->findSelectElementDynamic(origin).click());
 		findSelectElementDynamic(destination).click();
 		findElement(cb).click();
 		findElement(submit).click();
 	}
-	
+	public void makeStateReady(Consumer<OneWay> consumer) {
+		findElement(this.origin).click();
+		consumer.accept(this);
+	}
 }

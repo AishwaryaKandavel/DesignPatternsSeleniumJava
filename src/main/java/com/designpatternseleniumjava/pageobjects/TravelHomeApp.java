@@ -1,9 +1,13 @@
 package com.designpatternseleniumjava.pageobjects;
 
+import java.util.HashMap;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.designpatternseleniumjava.abstractcomponent.SearchFlightAvailable;
+import com.designpatternseleniumjava.abstractcomponent.StrategyFactor;
 import com.designpatternseleniumjava.pagecomponents.FooterNav;
 import com.designpatternseleniumjava.pagecomponents.NavigationBar;
 
@@ -27,10 +31,11 @@ public class TravelHomeApp {
     public void gotoHomePage(){
         driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
     }
-    public void setBookingStrategy(SearchFlightAvailable searchFlightAvailable) {
-		this.searchFlightAvailable = searchFlightAvailable;
+    public void setBookingStrategy(String strategy) {
+    	StrategyFactor sf = new StrategyFactor(driver);
+		this.searchFlightAvailable = sf.checkStrategy(strategy);
 	}
-    public void checkAvail(String origin, String destination) {
-		searchFlightAvailable.checkAvailability(origin, destination);
+    public void checkAvail(List<HashMap<String, String>> origDest) {
+		searchFlightAvailable.checkAvailability(origDest);
 	}
 }

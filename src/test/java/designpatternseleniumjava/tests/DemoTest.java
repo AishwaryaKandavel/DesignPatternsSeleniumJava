@@ -1,19 +1,18 @@
 package designpatternseleniumjava.tests;
-import java.time.Duration;
 
-import org.openqa.selenium.By;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
-import com.designpatternseleniumjava.pagecomponents.MultiCity;
-import com.designpatternseleniumjava.pagecomponents.OneWay;
-import com.designpatternseleniumjava.pagecomponents.RoundTrip;
 import com.designpatternseleniumjava.pageobjects.TravelHomeApp;
 
 public class DemoTest {
-	By searchFlightSection = By.id("flightSearchContainer");
     @Test
     public void flightTest(){
     	ChromeOptions options = new ChromeOptions();
@@ -29,12 +28,34 @@ public class DemoTest {
         System.out.println(travelApp.getFooterNav().getLinksCount());
         System.out.println(travelApp.getNavigationBar().getLinksCount());
         
-        travelApp.setBookingStrategy(new OneWay(driver, searchFlightSection));
-        travelApp.checkAvail("MAA", "BLR");
-        travelApp.setBookingStrategy(new RoundTrip(driver, searchFlightSection));
-        travelApp.checkAvail("KQH", "SAG");
-        travelApp.setBookingStrategy(new MultiCity(driver, searchFlightSection));
-        travelApp.checkAvail("HBX", "SXR");
+        List<HashMap<String, String>> origDest = new ArrayList<HashMap<String,String>>();
+        HashMap<String, String> keyValue = new HashMap<String, String>();
+        
+        keyValue.put("origin", "MAA");
+        keyValue.put("destination", "BLR");
+        origDest.add(new HashMap<String, String>(keyValue));
+        travelApp.setBookingStrategy("OneWay");
+        travelApp.checkAvail(origDest);
+        
+        origDest.clear();
+        keyValue.put("origin", "KQH");
+        keyValue.put("destination", "SAG");
+        origDest.add(new HashMap<String, String>(keyValue));
+        travelApp.setBookingStrategy("RoundTrip");
+        travelApp.checkAvail(origDest);
+        
+        origDest.clear();
+        keyValue.put("origin", "HBX");
+        keyValue.put("destination", "AMD");
+        origDest.add(new HashMap<String, String>(keyValue));
+        keyValue.put("origin", "AMD");
+        keyValue.put("destination", "GOI");
+        origDest.add(new HashMap<String, String>(keyValue));
+        keyValue.put("origin", "GOI");
+        keyValue.put("destination", "HBX");
+        origDest.add(new HashMap<String, String>(keyValue));
+        travelApp.setBookingStrategy("MultiCity");
+        travelApp.checkAvail(origDest);
         
         driver.quit();
     }

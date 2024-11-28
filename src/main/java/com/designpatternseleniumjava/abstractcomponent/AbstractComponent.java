@@ -30,6 +30,10 @@ public abstract class AbstractComponent {
     	return section.findElements(elementBy);
     }
     
+    public boolean waitForElementToDisappear(By elementBy) {
+    	return wait.until(ExpectedConditions.invisibilityOfElementLocated(elementBy));
+	}
+    
     public WebElement findSelectElementDynamic(String value) {
     	String xpath = "//a[@value='"+value+"' and not(ancestor::div[contains(@style, 'display: none')])]";
     	return wait.until(ExpectedConditions.elementToBeClickable(section.findElement(By.xpath(xpath))));
