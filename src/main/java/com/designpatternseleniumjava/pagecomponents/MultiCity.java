@@ -31,11 +31,10 @@ public class MultiCity extends AbstractComponent implements SearchFlightAvailabl
 	public void checkAvailability(List<HashMap<String, String>> origDest) {
 		makeStateReady(s->waitForElementToDisappear(alertOk));
 		for(int i=0; i<origDest.size(); i++) {
-			int index = i+1;
 			String origin = origDest.get(i).get("origin");
 			String destination = origDest.get(i).get("destination");
 			System.out.println("MultiCity: "+origin+" to "+destination);
-			selectOriginCity(origin, index);
+			selectOriginCity(origin, i+1);
 			selectDestinationCity(destination);
 		}
 		findElement(cb).click();

@@ -19,7 +19,7 @@ public abstract class AbstractComponent {
         this.section = driver.findElement(section);
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("arguments[0].scrollIntoView(true)", this.section);
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
     public WebElement findElement(By elementBy){

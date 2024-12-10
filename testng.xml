@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="5" parallel="tests">
+	<test name="OneWay">
+		<classes>
+			<class name="designpatternseleniumjava.tests.OneWayTest" />
+		</classes>
+	</test>
+	<test name="MultiTrip">
+		<classes>
+			<class name="designpatternseleniumjava.tests.MultiTripTest" />
+		</classes>
+	</test>
+	<test name="RoundTrip">
+		<classes>
+			<class name="designpatternseleniumjava.tests.RoundTripTest" />
+		</classes>
+	</test>
+	<test name="UI">
+		<classes>
+			<class name="designpatternseleniumjava.tests.UITest" />
+		</classes>
+	</test>
+	<test name="E2E">
+		<classes>
+			<class name="designpatternseleniumjava.tests.E2ETest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="designpatternseleniumjava.tests.DemoTest">
+      <class name="designpatternseleniumjava.tests.MultiTripTest">
         <methods>
           <include name="flightTest"/>
         </methods>
-      </class> <!-- designpatternseleniumjava.tests.DemoTest -->
+      </class> <!-- designpatternseleniumjava.tests.MultiTripTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

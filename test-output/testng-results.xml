@@ -1,17 +1,231 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-28T00:15:52 GMT" name="Default suite" finished-at="2024-11-28T00:16:50 GMT" duration-ms="58060">
+  <suite started-at="2024-12-10T20:30:35 GMT" name="Suite" finished-at="2024-12-10T20:32:47 GMT" duration-ms="132831">
     <groups>
     </groups>
-    <test started-at="2024-11-28T00:15:52 GMT" name="Default test" finished-at="2024-11-28T00:16:50 GMT" duration-ms="58060">
-      <class name="designpatternseleniumjava.tests.DemoTest">
-        <test-method signature="flightTest()[pri:0, instance:designpatternseleniumjava.tests.DemoTest@53aac487]" started-at="2024-11-28T00:15:52 GMT" name="flightTest" finished-at="2024-11-28T00:16:50 GMT" duration-ms="57990" status="PASS">
+    <test started-at="2024-12-10T20:30:35 GMT" name="UI" finished-at="2024-12-10T20:30:46 GMT" duration-ms="11524">
+      <class name="designpatternseleniumjava.tests.UITest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:designpatternseleniumjava.tests.UITest@1750fbeb]" started-at="2024-12-10T20:30:35 GMT" name="setUp" finished-at="2024-12-10T20:30:43 GMT" duration-ms="8911" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="uiTest()[pri:0, instance:designpatternseleniumjava.tests.UITest@1750fbeb]" started-at="2024-12-10T20:30:43 GMT" name="uiTest" finished-at="2024-12-10T20:30:44 GMT" duration-ms="706" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uiTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:designpatternseleniumjava.tests.UITest@1750fbeb]" started-at="2024-12-10T20:30:44 GMT" name="tearDown" finished-at="2024-12-10T20:30:46 GMT" duration-ms="1871" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- designpatternseleniumjava.tests.UITest -->
+    </test> <!-- UI -->
+    <test started-at="2024-12-10T20:30:35 GMT" name="OneWay" finished-at="2024-12-10T20:31:04 GMT" duration-ms="29282">
+      <class name="designpatternseleniumjava.tests.OneWayTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:designpatternseleniumjava.tests.OneWayTest@793f29ff]" started-at="2024-12-10T20:30:35 GMT" name="setUp" finished-at="2024-12-10T20:30:39 GMT" duration-ms="4919" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="flightTest(java.util.List)[pri:0, instance:designpatternseleniumjava.tests.OneWayTest@793f29ff]" started-at="2024-12-10T20:30:40 GMT" name="flightTest" data-provider="getData" finished-at="2024-12-10T20:30:53 GMT" duration-ms="13080" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[{origin=MAA, destination=BLR}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flightTest -->
-      </class> <!-- designpatternseleniumjava.tests.DemoTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method signature="flightTest(java.util.List)[pri:0, instance:designpatternseleniumjava.tests.OneWayTest@793f29ff]" started-at="2024-12-10T20:30:53 GMT" name="flightTest" data-provider="getData" finished-at="2024-12-10T20:31:03 GMT" duration-ms="9854" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[{origin=MAA, destination=HBX}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:designpatternseleniumjava.tests.OneWayTest@793f29ff]" started-at="2024-12-10T20:31:03 GMT" name="tearDown" finished-at="2024-12-10T20:31:04 GMT" duration-ms="452" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- designpatternseleniumjava.tests.OneWayTest -->
+    </test> <!-- OneWay -->
+    <test started-at="2024-12-10T20:30:35 GMT" name="RoundTrip" finished-at="2024-12-10T20:31:15 GMT" duration-ms="40346">
+      <class name="designpatternseleniumjava.tests.RoundTripTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:designpatternseleniumjava.tests.RoundTripTest@5386659f]" started-at="2024-12-10T20:30:35 GMT" name="setUp" finished-at="2024-12-10T20:30:44 GMT" duration-ms="9722" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="flightTest(java.util.List)[pri:0, instance:designpatternseleniumjava.tests.RoundTripTest@5386659f]" started-at="2024-12-10T20:30:44 GMT" name="flightTest" data-provider="getData" finished-at="2024-12-10T20:30:55 GMT" duration-ms="10811" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[{origin=BLR, destination=MAA}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightTest -->
+        <test-method signature="flightTest(java.util.List)[pri:0, instance:designpatternseleniumjava.tests.RoundTripTest@5386659f]" started-at="2024-12-10T20:30:55 GMT" name="flightTest" data-provider="getData" finished-at="2024-12-10T20:31:05 GMT" duration-ms="9930" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[{origin=HBX, destination=BLR}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightTest -->
+        <test-method signature="flightTest(java.util.List)[pri:0, instance:designpatternseleniumjava.tests.RoundTripTest@5386659f]" started-at="2024-12-10T20:31:05 GMT" name="flightTest" data-provider="getData" finished-at="2024-12-10T20:31:14 GMT" duration-ms="9296" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[{origin=BLR, destination=HBX}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:designpatternseleniumjava.tests.RoundTripTest@5386659f]" started-at="2024-12-10T20:31:14 GMT" name="tearDown" finished-at="2024-12-10T20:31:15 GMT" duration-ms="461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- designpatternseleniumjava.tests.RoundTripTest -->
+    </test> <!-- RoundTrip -->
+    <test started-at="2024-12-10T20:30:35 GMT" name="MultiTrip" finished-at="2024-12-10T20:32:00 GMT" duration-ms="85148">
+      <class name="designpatternseleniumjava.tests.MultiTripTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:designpatternseleniumjava.tests.MultiTripTest@6fa51cd4]" started-at="2024-12-10T20:30:35 GMT" name="setUp" finished-at="2024-12-10T20:30:39 GMT" duration-ms="4874" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="flightTest(java.util.List)[pri:0, instance:designpatternseleniumjava.tests.MultiTripTest@6fa51cd4]" started-at="2024-12-10T20:30:40 GMT" name="flightTest" data-provider="getData" finished-at="2024-12-10T20:31:21 GMT" duration-ms="40891" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[{origin=BLR, destination=MAA}, {origin=HBX, destination=BLR}, {origin=BLR, destination=HBX}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightTest -->
+        <test-method signature="flightTest(java.util.List)[pri:0, instance:designpatternseleniumjava.tests.MultiTripTest@6fa51cd4]" started-at="2024-12-10T20:31:21 GMT" name="flightTest" data-provider="getData" finished-at="2024-12-10T20:31:59 GMT" duration-ms="37672" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[{origin=HBX, destination=AMD}, {origin=AMD, destination=GOI}, {origin=GOI, destination=HBX}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:designpatternseleniumjava.tests.MultiTripTest@6fa51cd4]" started-at="2024-12-10T20:31:59 GMT" name="tearDown" finished-at="2024-12-10T20:32:00 GMT" duration-ms="590" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- designpatternseleniumjava.tests.MultiTripTest -->
+    </test> <!-- MultiTrip -->
+    <test started-at="2024-12-10T20:30:35 GMT" name="E2E" finished-at="2024-12-10T20:32:47 GMT" duration-ms="132831">
+      <class name="designpatternseleniumjava.tests.E2ETest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:designpatternseleniumjava.tests.E2ETest@3e08ff24]" started-at="2024-12-10T20:30:35 GMT" name="setUp" finished-at="2024-12-10T20:30:40 GMT" duration-ms="4989" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="UITest()[pri:0, instance:designpatternseleniumjava.tests.E2ETest@3e08ff24]" started-at="2024-12-10T20:30:40 GMT" name="UITest" finished-at="2024-12-10T20:30:45 GMT" duration-ms="5055" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UITest -->
+        <test-method signature="oneWay(java.util.List)[pri:0, instance:designpatternseleniumjava.tests.E2ETest@3e08ff24]" started-at="2024-12-10T20:30:45 GMT" name="oneWay" data-provider="oneWayGetData" finished-at="2024-12-10T20:30:55 GMT" duration-ms="9991" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[{origin=MAA, destination=BLR}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneWay -->
+        <test-method signature="oneWay(java.util.List)[pri:0, instance:designpatternseleniumjava.tests.E2ETest@3e08ff24]" started-at="2024-12-10T20:30:55 GMT" name="oneWay" data-provider="oneWayGetData" finished-at="2024-12-10T20:31:04 GMT" duration-ms="9371" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[{origin=MAA, destination=HBX}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneWay -->
+        <test-method signature="roundTrip(java.util.List)[pri:0, instance:designpatternseleniumjava.tests.E2ETest@3e08ff24]" started-at="2024-12-10T20:31:04 GMT" name="roundTrip" data-provider="roundTripGetData" finished-at="2024-12-10T20:31:13 GMT" depends-on-methods="designpatternseleniumjava.tests.E2ETest.oneWay" duration-ms="9279" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[{origin=BLR, destination=MAA}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- roundTrip -->
+        <test-method signature="roundTrip(java.util.List)[pri:0, instance:designpatternseleniumjava.tests.E2ETest@3e08ff24]" started-at="2024-12-10T20:31:13 GMT" name="roundTrip" data-provider="roundTripGetData" finished-at="2024-12-10T20:31:23 GMT" depends-on-methods="designpatternseleniumjava.tests.E2ETest.oneWay" duration-ms="9286" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[{origin=HBX, destination=BLR}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- roundTrip -->
+        <test-method signature="roundTrip(java.util.List)[pri:0, instance:designpatternseleniumjava.tests.E2ETest@3e08ff24]" started-at="2024-12-10T20:31:23 GMT" name="roundTrip" data-provider="roundTripGetData" finished-at="2024-12-10T20:31:33 GMT" depends-on-methods="designpatternseleniumjava.tests.E2ETest.oneWay" duration-ms="10526" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[{origin=BLR, destination=HBX}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- roundTrip -->
+        <test-method signature="multiTrip(java.util.List)[pri:0, instance:designpatternseleniumjava.tests.E2ETest@3e08ff24]" started-at="2024-12-10T20:31:33 GMT" name="multiTrip" data-provider="multiTripGetData" finished-at="2024-12-10T20:32:10 GMT" depends-on-methods="designpatternseleniumjava.tests.E2ETest.roundTrip" duration-ms="36840" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[{origin=BLR, destination=MAA}, {origin=HBX, destination=BLR}, {origin=BLR, destination=HBX}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- multiTrip -->
+        <test-method signature="multiTrip(java.util.List)[pri:0, instance:designpatternseleniumjava.tests.E2ETest@3e08ff24]" started-at="2024-12-10T20:32:10 GMT" name="multiTrip" data-provider="multiTripGetData" finished-at="2024-12-10T20:32:47 GMT" depends-on-methods="designpatternseleniumjava.tests.E2ETest.roundTrip" duration-ms="36708" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[{origin=HBX, destination=AMD}, {origin=AMD, destination=GOI}, {origin=GOI, destination=HBX}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- multiTrip -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:designpatternseleniumjava.tests.E2ETest@3e08ff24]" started-at="2024-12-10T20:32:47 GMT" name="tearDown" finished-at="2024-12-10T20:32:47 GMT" duration-ms="559" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- designpatternseleniumjava.tests.E2ETest -->
+    </test> <!-- E2E -->
+  </suite> <!-- Suite -->
 </testng-results>

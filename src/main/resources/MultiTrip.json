@@ -1,0 +1,30 @@
+[
+  [
+    {
+      "origin": "BLR",
+      "destination": "MAA"
+    },
+    {
+      "origin": "HBX",
+      "destination": "BLR"
+    },
+    {
+      "origin": "BLR",
+      "destination": "HBX"
+    }
+  ],
+  [
+    {
+      "origin": "HBX",
+      "destination": "AMD"
+    },
+    {
+      "origin": "AMD",
+      "destination": "GOI"
+    },
+    {
+      "origin": "GOI",
+      "destination": "HBX"
+    }
+  ]
+]
